@@ -22,7 +22,12 @@ Include `scrollmarker.js` at the bottom of your page and tell it which elements 
 ```
 
 *Note: the more elements are matched by the selector, the more detailed but also slower the tracking will be*
+
 *Note: elements without an id attribute will be given one based on element's contents*
+
+Supported browsers
+==================
+Makes use of html5 History API. Unsupported browsers (IE < 10) will be silently ignored.
 
 Example
 =======
