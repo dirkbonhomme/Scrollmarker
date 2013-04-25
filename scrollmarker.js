@@ -1,4 +1,4 @@
-/*!
+/*
  * Scrollmarker - continue where you left
  *
  * Copyright 2013, Bytelogic
@@ -54,7 +54,7 @@ window.scrollmarker = (function(){
     var uniqueId = 1;
     var generateId = function(element){
         var id = element.id;
-        if(id)return id;
+        if(id) return id;
         id = (element.textContent || element.title || element.alt || 'scrollmarker')
             .toLowerCase()
             .replace(/[^\w ]+/g, '') // filter non-alphanumeric
@@ -100,7 +100,7 @@ window.scrollmarker = (function(){
      * Return public interface
      */
     return function(selector){
-        if(!(window.history.replaceState)) return; // unsupported browser
+        if(!window.history.replaceState) return; // unsupported browser
         collectTargets(selector);
         scrollToTarget();
         document.addEventListener('scroll', handleScrollThrottled);
